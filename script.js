@@ -24,4 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setTimeout(rotateSlides, 6500);
     setInterval(rotateSlides, 6500);
+
+    // DSGVO-konforme Google Maps-Einbindung
+    const mapBtn = document.getElementById('load-map');
+    if (mapBtn) {
+        mapBtn.addEventListener('click', function() {
+            const mapEmbed = document.getElementById('map-embed');
+            mapEmbed.innerHTML = '<iframe src="https://www.google.com/maps?q=Weißenstädter+Str.+2,+95158+Kirchenlamitz&output=embed" width="100%" height="140" style="border:0; border-radius:1rem;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Karte: Nasty\'s Diele"></iframe>';
+        });
+    }
 });
